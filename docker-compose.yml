@@ -1,0 +1,9 @@
+version: '3'
+services:
+  self-hosted-azp-agent:
+    image: jmerle/self-hosted-azp-agent
+    environment:
+      - AZP_URL=${AZP_URL}
+      - AZP_TOKEN=${AZP_TOKEN}
+      - AZP_AGENT_NAME=${AZP_AGENT_NAME}
+    restart: unless-stopped
